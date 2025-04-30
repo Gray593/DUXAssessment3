@@ -2,11 +2,14 @@ import Menu from "./Menu.js"
 import SearchBar from "./SearchBar.js"
 import './App.css';
 
-function Home() {
+import { Link } from "react-router-dom";
+
+function Home({menu,setMenu}) {
+
   return (
-    <div className="Home">
+    <div className="home">
       <div className='navBar'>
-        <Menu/>
+        <div className="menuIcon" onClick={()=>setMenu(!menu)}/>
         <SearchBar/>
       </div>
       <div className="title">
@@ -14,7 +17,11 @@ function Home() {
         <h3>Free Online Encyclopedia</h3>
       </div>
       <div className="gallery">
-
+        <img className="mike" src={require('./mike2.png')}/>
+      </div>
+      <Menu menu={menu} setMenu={setMenu}/>
+      <div className="trendingButton">
+        <Link to="/trending" className="trendingButtonText">Trending</Link>
       </div>
     </div>
   );

@@ -6,14 +6,16 @@ import Trending from './Trending.js';
 import MichaelJordan from './Michael-Jordan.js';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 export default function App() {
+  const [menu,setMenu] = useState(false)
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="trending" element={<Trending />} />
-        <Route path="Michael-Jordan" element={<MichaelJordan />} />
+        <Route path="/" element={<Home menu={menu} setMenu={setMenu}/>}/>
+        <Route path="trending" element={<Trending menu={menu} setMenu={setMenu}/>} />
+        <Route path="Michael-Jordan" element={<MichaelJordan menu={menu} setMenu={setMenu}/>} />
       </Routes>
     </BrowserRouter>
   );
