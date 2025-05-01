@@ -15,7 +15,11 @@ export default function MichaelJordan({menu,setMenu}){
         <div className="michaelJordan" >
             <div className="micHeader" >
                 <div className='navBar'>
-                    <div className="menuIcon" onClick={()=>setMenu(!menu)}/>
+                <div className="menuIcon" onClick={()=>setMenu(!menu)}>
+                    <div className="menuBar"></div>
+                    <div className="menuBar"></div>
+                    <div className="menuBar"></div>
+                </div>
                     <SearchBar/>
                 </div>
                 <h1 className="micTitle">Michael Jordan</h1>               
@@ -40,6 +44,10 @@ export default function MichaelJordan({menu,setMenu}){
                 <p>{pageInfo[3]}</p>
             </div>
             <Menu menu={menu} setMenu={setMenu}/>
+            <div className="footer">
+                <h4 className="footerText">Privacy Policy</h4>
+                <h4 className="footerText">Terms of Use</h4>
+            </div>
 
         </div>
     )

@@ -8,7 +8,7 @@ export default function Menu({menu,setMenu}){
                 <div className="menuHeader">
                     <h1 id="menuTitle">Encyclopedia</h1>
                     <h3 id="menuSubTitle">Free Online Encyclopedia</h3>
-                    <div className="exit" onClick={()=>setMenu(!menu)}/>
+                    <div className="exit" onClick={()=>setMenu(!menu)}>X</div>
                 </div>
                 <ul>
                     <li>

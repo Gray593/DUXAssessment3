@@ -9,7 +9,11 @@ export default function Trending({menu,setMenu}){
     return(
         <div className="trending">
             <div className='navBar'>
-                <div className="menuIcon" onClick={()=>setMenu(!menu)}/>
+            <div className="menuIcon" onClick={()=>setMenu(!menu)}>
+                <div className="menuBar"></div>
+                <div className="menuBar"></div>
+                <div className="menuBar"></div>
+            </div>
                 <SearchBar/>
             </div>
             <h1 className="trendingPageTitle">Trending</h1>
@@ -19,6 +23,10 @@ export default function Trending({menu,setMenu}){
 
             </div>
             <Menu menu={menu} setMenu={setMenu}/>
+            <div className="footer">
+                <h4 className="footerText">Privacy Policy</h4>
+                <h4 className="footerText">Terms of Use</h4>
+            </div>
        </div>
     )
 }

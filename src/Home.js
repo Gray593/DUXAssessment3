@@ -9,7 +9,11 @@ function Home({menu,setMenu}) {
   return (
     <div className="home">
       <div className='navBar'>
-        <div className="menuIcon" onClick={()=>setMenu(!menu)}/>
+        <div className="menuIcon" onClick={()=>setMenu(!menu)}>
+          <div className="menuBar"></div>
+          <div className="menuBar"></div>
+          <div className="menuBar"></div>
+        </div>
         <SearchBar/>
       </div>
       <div className="title">
